@@ -1,4 +1,4 @@
-# SCP-RP [Discord](https://Discord.gg/WVmBPty)
+# SCP-RP ![Logo](https://img.shields.io/discord/701841584647438357?color=blue&label=Discord&logo=Discord)
 Jest to paczka plików serwera ExtremeOnly SCP-RP które moga sie osobą początkującym przydać
 
 # Prawa
