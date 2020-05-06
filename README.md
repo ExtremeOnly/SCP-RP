@@ -1,4 +1,4 @@
-# SCP-RP
+# SCP-RP [Discord](https://Discord.gg/WVmBPty)
 Jest to paczka plików serwera ExtremeOnly SCP-RP które moga sie osobą początkującym przydać
 
 # Prawa
