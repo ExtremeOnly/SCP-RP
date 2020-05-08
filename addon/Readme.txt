@@ -1,1 +1,1 @@
-Pliki serwerowni ExtremeOnly, GameResidance, ExtremGames.pl
+Pliki z serwerów ExtremeOnly
