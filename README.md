@@ -1,4 +1,4 @@
-# SCP-RP ![Logo](https://img.shields.io/discord/701841584647438357?color=blue&label=Discord&logo=Discord) ![Ver](https://img.shields.io/github/v/release/ExtremeOnly/SCP-RP?color=darkgreen&label=Ver&logo=Github) ![Serwer](https://img.shields.io/website?color=dark&down_color=Red&down_message=Wy%C5%82%C4%85czona&label=Serwer&logo=steam&up_color=Green&up_message=W%C5%82%C4%85czony&url=https%3A%2F%2Fimg.shields.io%2Fwebsite%2Fhttps%2Fwww.ExtremeOnly.net.pl%2Findex.html)
+# SCP-RP ![Logo](https://img.shields.io/discord/701841584647438357?color=blue&label=Discord&logo=Discord) ![Ver](https://img.shields.io/github/v/release/ExtremeOnly/SCP-RP?color=darkgreen&label=Ver&logo=Github) ![Serwer](https://img.shields.io/uptimerobot/status/m783941674-da4338b84c8a51865c2347d2?label=Status&logo=steam)
 Jest to paczka plików serwera ExtremeOnly SCP-RP które moga sie osobą początkującym przydać
 
 # Prawa
