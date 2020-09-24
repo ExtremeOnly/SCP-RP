@@ -69,10 +69,11 @@ TEAM_KLASAS = DarkRP.createJob("Sprzątacz", {
     command = "Sprzatacz",
     max = 5,
     salary = GAMEMODE.Config.normalsalary,
-    admin = 2,
+    admin = 0,
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 3,
     category = "Klasy",
 })
 
@@ -90,6 +91,7 @@ TEAM_KWATER = DarkRP.createJob("Kwatermistrz", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 5,
     category = "Klasy",
 })
 
@@ -280,6 +282,7 @@ TEAM_SCP173 = DarkRP.createJob("SCP 173", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 10,
     category = "SCP",
 })
 
@@ -295,6 +298,7 @@ TEAM_SCP106 = DarkRP.createJob("SCP 106 [WL]", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 15,
     category = "SCP",
 })
 
@@ -310,6 +314,7 @@ TEAM_SCP096 = DarkRP.createJob("SCP 096", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 11,
     category = "SCP",
 })
 
@@ -325,6 +330,7 @@ TEAM_SCP999 = DarkRP.createJob("SCP 999", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 5,
     category = "SCP",
 })
 
@@ -340,6 +346,7 @@ TEAM_SCP066 = DarkRP.createJob("SCP 066", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 7,
     category = "SCP",
 })
 
@@ -347,14 +354,15 @@ TEAM_SCP131 = DarkRP.createJob("SCP 131-A", {
     color = Color(150, 63, 0),
     model = "models/scprp/scp131a2.mdl",
     description = [[SCP-131 Oczki strączne]],
-    weapons = {"weapon_scp131"},
-    command = "weapon_hands",
+    weapons = {"weapon_hands"},
+    command = "scp131aa",
     max = 1,
     salary = 100,
     admin = 0,
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 6,
     category = "SCP",
 })
 
@@ -370,6 +378,7 @@ TEAM_SCP131 = DarkRP.createJob("SCP 131-B", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 6,
     category = "SCP",
 })
 
@@ -385,10 +394,11 @@ TEAM_SCP1991 = DarkRP.createJob("SCP 1991 [VIP]", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 15,
     category = "SCP",
 })
 
-TEAM_SCP023 = DarkRP.createJob("SCP 023", {
+TEAM_SCP023 = DarkRP.createJob("SCP 023 [VIP]", {
     color = Color(150, 63, 0),
     model = "models/novux/023/novux_scp-023.mdl",
     description = [[SCP-023 Cień wilka]],
@@ -400,6 +410,7 @@ TEAM_SCP023 = DarkRP.createJob("SCP 023", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 8,
     category = "SCP",
 })
 
@@ -415,6 +426,7 @@ TEAM_SCP939 = DarkRP.createJob("SCP 939", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 10,
     category = "SCP",
 })
 
@@ -430,6 +442,7 @@ TEAM_SCP1048A = DarkRP.createJob("SCP 1048-A", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 3,
     category = "SCP",
 })
 
@@ -445,6 +458,7 @@ TEAM_SCP1048B = DarkRP.createJob("SCP 1048-B", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 8,
     category = "SCP",
 })
 
@@ -460,6 +474,7 @@ TEAM_SCP682 = DarkRP.createJob("SCP 682 [WL]", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 20,
     category = "SCP",
 })
 
@@ -475,6 +490,7 @@ TEAM_SCP049 = DarkRP.createJob("SCP 049", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 10,
     category = "SCP",
 })
 
@@ -490,10 +506,11 @@ TEAM_SCP966 = DarkRP.createJob("SCP 966", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 8,
     category = "SCP",
 })
 
-TEAM_MFOHDZ = DarkRP.createJob("Zołnierz MFO - Hammer Down", {
+TEAM_MFOHDZ = DarkRP.createJob("Zołnierz MFO - Hammer Down [WL]", {
     color = Color(0, 22, 150),
     model = {
         "models/npc/portal/male_02_garde.mdl",
@@ -530,7 +547,7 @@ TEAM_MFOHDGEN = DarkRP.createJob("General MFO - Hammer Down [WL]", {
     category = "MFO - Hammer Down",
 })
 
-TEAM_MFOHDMED = DarkRP.createJob("Medyk MFO - Hammer Down", {
+TEAM_MFOHDMED = DarkRP.createJob("Medyk MFO - Hammer Down [WL]", {
     color = Color(0, 22, 150),
     model = {
         "models/payday2/units/medic_combine.mdl",
@@ -547,10 +564,11 @@ TEAM_MFOHDMED = DarkRP.createJob("Medyk MFO - Hammer Down", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 10,
     category = "MFO - Hammer Down",
 })
 
-TEAM_MFOHDDOG = DarkRP.createJob("Pies MFO - Hammer Down", {
+TEAM_MFOHDDOG = DarkRP.createJob("Pies MFO - Hammer Down [WL]", {
     color = Color(0, 22, 150),
     model = "models/arachnit/wolfenstein2/kampfhund/kampfhund.mdl",
     description = [[Pies Mobilnej formacji operacyjnej ma za zadanie Pilnować porządku i wyszukiwać kontrabande]],
@@ -565,7 +583,7 @@ TEAM_MFOHDDOG = DarkRP.createJob("Pies MFO - Hammer Down", {
     category = "MFO - Hammer Down",
 })
 
-TEAM_MFOW = DarkRP.createJob("Wsparcie Fundacji Klasy D [VIP]", {
+TEAM_MFOW = DarkRP.createJob("[EVENTOWY] Wsparcie Fundacji Klasy D [VIP]", {
     color = Color(0, 37, 250),
     model = {
         "models/konnie/isa/detroit/swat_soldier.mdl",
@@ -581,10 +599,10 @@ TEAM_MFOW = DarkRP.createJob("Wsparcie Fundacji Klasy D [VIP]", {
     vote = false,
     hasLicense = true,
     candemote = false,
-    category = "MFO - Hammer Down",
+    category = "Eventowe",
 })
 
-TEAM_MFOWS = DarkRP.createJob("Wsparcie Fundacji SCP [VIP]", {
+TEAM_MFOWS = DarkRP.createJob("[EVENTOWY] Wsparcie Fundacji SCP [VIP]", {
     color = Color(0, 37, 250),
     model = {
 		"models/konnie/isa/detroit/swat_soldier.mdl",
@@ -600,10 +618,10 @@ TEAM_MFOWS = DarkRP.createJob("Wsparcie Fundacji SCP [VIP]", {
     vote = false,
     hasLicense = true,
     candemote = false,
-    category = "MFO - Hammer Down",
+    category = "Eventowe",
 })
 
-TEAM_CIR = DarkRP.createJob("Zołnierz CI", {
+TEAM_CIR = DarkRP.createJob("[EVENTOWY] Zołnierz CI", {
     color = Color(1, 148, 58),
     model = "models/friskiukas/bf4/ru_01.mdl",
     description = [[Rekrut rebeli chaosu]],
@@ -618,7 +636,7 @@ TEAM_CIR = DarkRP.createJob("Zołnierz CI", {
     category = "Rebelia Chaosu",
 })
 
-TEAM_CIS = DarkRP.createJob("Zwiadowca CI", {
+TEAM_CIS = DarkRP.createJob("[EVENTOWY] Zwiadowca CI", {
     color = Color(1, 148, 58),
     model = {
         "models/player/pmc_4/pmc__02.mdl",
@@ -647,7 +665,7 @@ TEAM_CIS = DarkRP.createJob("Zwiadowca CI", {
     category = "Rebelia Chaosu",
 })
 
-TEAM_CIG = DarkRP.createJob("Generał CI [WL]", {
+TEAM_CIG = DarkRP.createJob("[EVENTOWY] Generał CI [WL]", {
     color = Color(1, 148, 58),
     model = "models/player/pmc_1/pmc__01.mdl",
     description = [[Generał rebeli chaosu]],
@@ -665,8 +683,8 @@ TEAM_CIG = DarkRP.createJob("Generał CI [WL]", {
 TEAM_DEPZARZ = DarkRP.createJob("Rada O5 [Admin Only]", {
     color = Color(66, 66, 66),
     model = {
-        "models/player/suits/male_09_shirt_tie.mdl",
-		"models/player/suits/male_09_shirt.mdl",
+        "models/player/nick/scp/head_of_security/hos.mdl",
+		"models/player/nick/scp/site_director/sd.mdl",
 		"models/player/suits/male_09_open_waistcoat.mdl",
 		"models/player/suits/male_09_open_tie.mdl",
 		"models/player/suits/male_09_open.mdl",
@@ -727,8 +745,8 @@ TEAM_DEPZARZ = DarkRP.createJob("Rada O5 [Admin Only]", {
 TEAM_DEPDYR = DarkRP.createJob("Dyrektor Placówki [WL]", {
     color = Color(66, 66, 66),
     model = {
-		"models/player/suits/male_05_shirt_tie.mdl",
-		"models/player/suits/male_05_open_waistcoat.mdl",
+        "models/player/nick/scp/head_of_security/hos.mdl",
+		"models/player/nick/scp/site_director/sd.mdl",
 		"models/player/suits/male_05_open_tie.mdl",
 		"models/player/suits/male_05_open.mdl",
 		"models/player/suits/male_05_closed_tie.mdl",
@@ -745,7 +763,7 @@ TEAM_DEPDYR = DarkRP.createJob("Dyrektor Placówki [WL]", {
     category = "Zarząd",
 })
 
-TEAM_DEPDS = DarkRP.createJob("Specjalista ds. przechowywania", {
+TEAM_DEPDS = DarkRP.createJob("Specjalista ds. przechowywania [VIP]", {
     color = Color(110, 110, 110),
     model = "models/cultist/scp_rp/scientists_6.mdl",
     description = [[Pełnisz role w zespołach zabezpieczających do potwierdzonych anomalii, by je zabezpieczyć ]],
@@ -757,6 +775,7 @@ TEAM_DEPDS = DarkRP.createJob("Specjalista ds. przechowywania", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 9,
     category = "Zarząd",
 })
 
@@ -803,6 +822,7 @@ TEAM_DEPLOG = DarkRP.createJob("Logistyki", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 1,
     category = "Departament",
 })
 
@@ -833,6 +853,7 @@ TEAM_DEPMED = DarkRP.createJob("Medycyny", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 3,
     category = "Departament",
 })
 
@@ -870,6 +891,7 @@ TEAM_DEPINZ = DarkRP.createJob("Inżynierii", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 2,
     category = "Departament",
 })
 
@@ -937,6 +959,7 @@ TEAM_OCHRONASA = DarkRP.createJob("FO - Sanitariusz Ochrona", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 3,
     category = "FO - Ochrona",
 })
 
@@ -977,6 +1000,7 @@ TEAM_POCHRONA = DarkRP.createJob("FO - Porucznik ochrony", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 6,
     category = "FO - Ochrona",
 })
 
@@ -995,7 +1019,7 @@ TEAM_MFOA1GEN = DarkRP.createJob("Generał MFO - Alpha 1 [WL]", {
     category = "MFO - Alpha 1",
 })
 
-TEAM_MFOA1 = DarkRP.createJob("MFO - Alpha 1", {
+TEAM_MFOA1 = DarkRP.createJob("MFO - Alpha 1 [WL]", {
     color = Color(2, 90, 153),
     model = {
         "models/scp_mtf_russian/mtf_rus_02.mdl",
@@ -1039,6 +1063,7 @@ TEAM_ASNaukowiec = DarkRP.createJob("Asystent Naukowy", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 3,
     category = "Naukowcy",
 })
 
@@ -1064,6 +1089,7 @@ TEAM_Naukowiec = DarkRP.createJob("Naukowiec", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 8,
     category = "Naukowcy",
 })
 
@@ -1089,6 +1115,7 @@ TEAM_MŁNaukowiec = DarkRP.createJob("Młodszy Naukowiec", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 5,
     category = "Naukowcy",
 })
 
@@ -1114,6 +1141,7 @@ TEAM_STNaukowiec = DarkRP.createJob("Starszy Naukowiec", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	level = 10,
     category = "Naukowcy",
 })
 
@@ -1132,7 +1160,7 @@ TEAM_GłNaukowiec = DarkRP.createJob("Główny Naukowiec [WL]", {
     category = "Naukowcy",
 })
 
-TEAM_FTS = DarkRP.createJob("FT - Żołnierz", {
+TEAM_FTS = DarkRP.createJob("FT - Żołnierz [WL]", {
     color = Color(0, 149, 255),
     model = "models/player/kerry/1swat_ls.mdl",
     description = [[Zajmuj sie odparciem wroga oraz wyłamaniom SCP.]],
@@ -1147,7 +1175,7 @@ TEAM_FTS = DarkRP.createJob("FT - Żołnierz", {
     category = "FT Siły Reagowania",
 })
 
-TEAM_FTG = DarkRP.createJob("FT - Generał", {
+TEAM_FTG = DarkRP.createJob("FT - Generał [WL]", {
     color = Color(0, 149, 255),
     model = "models/player/kerry/swat_ls.mdl",
     description = [[Szkol FT i zajmuj sie odparciem wroga oraz wyłamaniom SCP.]],
@@ -1160,6 +1188,72 @@ TEAM_FTG = DarkRP.createJob("FT - Generał", {
     hasLicense = true,
     candemote = false,
     category = "FT Siły Reagowania",
+})
+
+TEAM_CYW = DarkRP.createJob("Cywil [UCIECZKA]", {
+    color = Color(0, 149, 255),
+    model = {
+        "models/Humans/Group01/Female_01.mdl",
+        "models/Humans/Group01/Female_02.mdl",
+        "models/Humans/Group01/Female_03.mdl",
+        "models/Humans/Group01/Female_04.mdl",
+        "models/Humans/Group01/Female_05.mdl",
+        "models/Humans/Group01/Female_06.mdl",
+        "models/Humans/Group01/Female_07.mdl",
+		"models/Humans/Group01/Male_01.mdl",
+		"models/Humans/Group01/Male_02.mdl",
+		"models/Humans/Group01/Male_03.mdl",
+		"models/Humans/Group01/Male_04.mdl",
+		"models/Humans/Group01/Male_05.mdl",
+		"models/Humans/Group01/Male_06.mdl",
+		"models/Humans/Group01/Male_07.mdl",
+		"models/Humans/Group01/Male_08.mdl",
+    },
+    description = [[Cywil osoba która uciekła z placówki.]],
+    weapons = {"weapon_empty_hands", "weapon_fists", "weapon_pass_rp"},
+    command = "cywil",
+    max = 10,
+    salary = 30,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Eventowe",
+})
+
+TEAM_JACK = DarkRP.createJob("Dr. Jack Bright [WL]", {
+    color = Color(0, 149, 255),
+    model = {
+        "models/player/kerry/class_scientist_1.mdl",
+    },
+    description = [[Postać kanoniczna Dr. Jack Bright.]],
+    weapons = {"weapon_empty_hands", "weapon_fists", "weapon_pass_rp", "sg_adrenaline", "guthscp_keycard_lvl_4"},
+    command = "jb",
+    max = 1,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Naukowcy",
+})
+
+TEAM_AGENT = DarkRP.createJob("[EVENTOWY] Tajny Agent", {
+    color = Color(0, 149, 255),
+    model = {
+        "models/player/fyk/smith1.mdl",
+    },
+    description = [[Jest to agent fundacji.]],
+    weapons = {"weapon_empty_hands", "weapon_fists", "weapon_pass_rp", "sg_adrenaline", "cw_fiveseven"},
+    command = "agent",
+    max = 1,
+    salary = 300,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+	level = 15,
+    category = "Eventowe",
 })
 
 if not DarkRP.disabledDefaults["modules"]["hungermod"] then
@@ -1349,6 +1443,15 @@ DarkRP.createCategory{
     color = Color(50, 122, 173),
     canSee = fp{fn.Id, true},
     sortOrder = 8,
+}
+
+DarkRP.createCategory{
+    name = "Eventowe",
+    categorises = "jobs",
+    startExpanded = true,
+    color = Color(50, 122, 173),
+    canSee = fp{fn.Id, true},
+    sortOrder = 11,
 }
 
 DarkRP.createCategory{
