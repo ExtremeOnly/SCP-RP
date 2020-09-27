@@ -13,4 +13,5 @@ Ten tryb gry musi zostaÄ‡ wydany na licencji CC BY-NC 4.0 co prowadzi do tego iÅ
 ## Nasze strony
 
 Strona www: https://ExtremeOnly.net.pl/www
+Forum: https://ExtremeOnly.net.pl
 
