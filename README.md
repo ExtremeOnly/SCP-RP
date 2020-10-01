@@ -1,5 +1,5 @@
-# SCP-RP ![Logo](https://img.shields.io/discord/701841584647438357?color=blue&label=Discord&logo=Discord) ![Ver](https://img.shields.io/github/v/release/ExtremeOnly/SCP-RP?color=darkgreen&label=Ver&logo=Github) ![Serwer](https://img.shields.io/uptimerobot/status/m783941685-9cf0d370ad4beaa5bb4bb1a9?logo=microsoft&logoColor=blue)
-Jest to paczka plików serwera ExtremeOnly Minecraft które moga sie osobą początkującym przydać do towrzenia własnego serwera
+# SCP-RP ![Logo](https://img.shields.io/discord/701841584647438357?color=blue&label=Discord&logo=Discord) ![Ver](https://img.shields.io/github/v/release/ExtremeOnly/mc?color=darkgreen&label=Ver&logo=Github) ![Serwer](https://img.shields.io/uptimerobot/status/m783941674-da4338b84c8a51865c2347d2?label=Status&logo=steam)
+Jest to paczka plików serwera ExtremeOnly SCP-RP które są bardziej dla backupu oraz osób uczących sie
 
 # Prawa
 Te pliki muszą zostać wydany na licencji CC BY-NC 4.0 co prowadzi do tego iż: 
@@ -12,6 +12,6 @@ Te pliki muszą zostać wydany na licencji CC BY-NC 4.0 co prowadzi do tego iż:
 
 ## Nasze strony
 
-Strona www: https://ExtremeOnly.net.pl/www/mc
+Strona www: https://ExtremeOnly.net.pl/www/
 Forum: https://ExtremeOnly.net.pl
 
