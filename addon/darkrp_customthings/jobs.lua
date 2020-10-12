@@ -14,7 +14,7 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
         "models/classd/player/prisoners/jumpsuitm04.mdl",
         "models/classd/player/prisoners/jumpsuitm05.mdl",
         "models/classd/player/prisoners/jumpsuitm06.mdl",
-		"models/classd/player/prisoners/jumpsuitm07.mdl",
+	"models/classd/player/prisoners/jumpsuitm07.mdl",
     },
     description = [[Klasa D jest to domyślna klasa która jest brana na Badania]],
     weapons = {},
