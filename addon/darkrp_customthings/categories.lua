@@ -86,10 +86,28 @@ DarkRP.createCategory{
 --- Munition Kategorie
 
 DarkRP.createCategory{
-   name = "Munition",
+   name = "Amunicja",
+   categorises = "entities",
+   startExpanded = true,
+   color = Color(0, 138, 138, 138),
+   canSee = function(ply) return true end,
+   sortOrder = 2,
+}
+
+DarkRP.createCategory{
+   name = "Printerki",
+   categorises = "entities",
+   startExpanded = true,
+   color = Color(0, 54, 153, 255),
+   canSee = function(ply) return true end,
+   sortOrder = 1,
+}
+
+DarkRP.createCategory{
+   name = "Book",
    categorises = "entities",
    startExpanded = true,
    color = Color(0, 255, 178, 255),
    canSee = function(ply) return true end,
-   sortOrder = 25,
+   sortOrder = 3,
 }
