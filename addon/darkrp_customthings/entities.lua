@@ -16,42 +16,50 @@ http://wiki.darkrp.com/index.php/DarkRP:CustomEntityFields
 
 Add entities under the following line:
 ---------------------------------------------------------------------------]]
-DarkRP.createEntity( ".50 AE Ammo", { 
-   ent = "cw_ammo_50ae",
+DarkRP.createEntity( "Mała paczka amunicji", { 
+   ent = "cw_ammo_kit_small",
    model = "models/Items/BoxSRounds.mdl",
    price = 150,
-   max = 4,
-   cmd = ".05aeammo",
-   category = "Munition",
+   max = 2,
+   cmd = ".9x18mm",
+   category = "Amunicja",
    -- CustomCheck
 })
 
-DarkRP.createEntity( "5.56x45MM Ammo", { 
-   ent = "cw_ammo_556x45",
-   model = "models/Items/BoxSRounds.mdl",
+DarkRP.createEntity( "Skrzynia amunicji", { 
+   ent = "cw_ammo_crate_regular",
+   model = "models/props_equipment/storagetrunk01a.mdl",
    price = 250,
-   max = 4,
-   cmd = "556x45ammo",
-   category = "Munition",
+   max = 1,
+   cmd = ".d1",
+   category = "Amunicja",
+   -- CustomCheck
+   customCheck = function(ply) return
+    table.HasValue({TEAM_MFOHDGEN, TEAM_FTG, TEAM_CIG, TEAM_MFOA1GEN}, ply:Team())
+   end,
+   CustomCheckFailMsg = "Tylko dla wybranych prac",
+})
+
+DarkRP.createEntity( "Średnia paczka amunicji", { 
+   ent = "cw_ammo_kit_regular",
+   model = "models/Items/BoxMRounds.mdl",
+   price = 280,
+   max = 2,
+   cmd = ".dl32",
+   category = "Amunicja",
    -- CustomCheck
 })
 
-DarkRP.createEntity( "7.62x51MM Ammo", { 
-   ent = "cw_ammo_762x51",
+DarkRP.createEntity( "Paczka granatników", { 
+   ent = "cw_ammo_fraggrenades",
    model = "models/Items/BoxSRounds.mdl",
-   price = 280,
-   max = 4,
-   cmd = "762x51ammo",
-   category = "Munition",
+   price = 1000,
+   max = 1,
+   cmd = ".gran3",
+   category = "Amunicja",
    -- CustomCheck
-})
-
-DarkRP.createEntity( "9x19MM Ammo", { 
-   ent = "cw_ammo_9x19",
-   model = "models/Items/BoxSRounds.mdl",
-   price = 280,
-   max = 4,
-   cmd = "9x19ammo",
-   category = "Munition",
-   -- CustomCheck
+   customCheck = function(ply) return
+    table.HasValue({TEAM_MFOHDGEN, TEAM_FTG, TEAM_CIG, TEAM_MFOA1GEN}, ply:Team())
+   end,
+   CustomCheckFailMsg = "Tylko dla wybranych prac",
 })
