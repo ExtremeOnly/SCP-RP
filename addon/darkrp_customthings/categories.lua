@@ -111,3 +111,39 @@ DarkRP.createCategory{
    canSee = function(ply) return true end,
    sortOrder = 3,
 }
+-- Bronie
+DarkRP.createCategory{
+   name = "Pistolet",
+   categorises = "shipments",
+   startExpanded = true,
+   color = Color(0, 255, 178, 255),
+   canSee = function(ply) return true end,
+   sortOrder = 1,
+}
+
+DarkRP.createCategory{
+   name = "Nóż",
+   categorises = "shipments",
+   startExpanded = true,
+   color = Color(0, 255, 178, 255),
+   canSee = function(ply) return true end,
+   sortOrder = 2,
+}
+
+DarkRP.createCategory{
+   name = "Animacja",
+   categorises = "shipments",
+   startExpanded = true,
+   color = Color(0, 255, 178, 255),
+   canSee = function(ply) return true end,
+   sortOrder = 3,
+}
+
+DarkRP.createCategory{
+   name = "Inne",
+   categorises = "shipments",
+   startExpanded = true,
+   color = Color(0, 255, 178, 255),
+   canSee = function(ply) return true end,
+   sortOrder = 4,
+}
