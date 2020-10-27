@@ -54,6 +54,29 @@ TEAM_KLASAD = DarkRP.createJob("Klasa D", {
     category = "Klasy",
 })
 
+TEAM_KLASAD = DarkRP.createJob("Klasa D - (Płatny zabójca)", {
+    color = Color(255, 120, 0, 255),
+    model = {
+        "models/classd/player/prisoners/jumpsuitm01.mdl",
+        "models/classd/player/prisoners/jumpsuitm02.mdl",
+        "models/classd/player/prisoners/jumpsuitm03.mdl",
+        "models/classd/player/prisoners/jumpsuitm04.mdl",
+        "models/classd/player/prisoners/jumpsuitm05.mdl",
+        "models/classd/player/prisoners/jumpsuitm06.mdl",
+		"models/classd/player/prisoners/jumpsuitm07.mdl",
+    },
+    description = [[Klasa D jest to domyślna klasa z możliwością przyjęcia zabójstwa]],
+    weapons = {"weapon_fists", "weapon_empty_hands"},
+    command = "Klasaplatna",
+    max = 1,
+    salary = GAMEMODE.Config.normalsalary,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Klasy",
+})
+
 TEAM_KLASAS = DarkRP.createJob("Sprzątacz", {
     color = Color(255, 120, 0, 255),
     model = {
@@ -78,7 +101,7 @@ TEAM_KLASAS = DarkRP.createJob("Sprzątacz", {
 })
 
 TEAM_KWATER = DarkRP.createJob("Kwatermistrz", {
-    color = Color(255, 120, 0, 255),
+    color = Color(153, 79, 0, 255),
     model = {
         "models/player/portal/male_09_dode.mdl",
     },
@@ -97,7 +120,7 @@ TEAM_KWATER = DarkRP.createJob("Kwatermistrz", {
 })
 
 TEAM_KUCHARZ = DarkRP.createJob("Kucharz", {
-    color = Color(255, 120, 0, 255),
+    color = Color(153, 79, 0, 255),
     model = {
         "models/player/p_butcher.mdl",
     },
