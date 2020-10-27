@@ -54,7 +54,7 @@ TEAM_KLASAD = DarkRP.createJob("Klasa D", {
     category = "Klasy",
 })
 
-TEAM_KLASAD = DarkRP.createJob("Klasa D - (Płatny zabójca)", {
+TEAM_KLASADZB = DarkRP.createJob("Klasa D - (Płatny zabójca)", {
     color = Color(255, 120, 0, 255),
     model = {
         "models/classd/player/prisoners/jumpsuitm01.mdl",
@@ -1555,7 +1555,7 @@ end
 
 -- Compatibility for when default teams are disabled
 TEAM_CITIZEN = TEAM_CITIZEN  or -1
-TEAM_POLICE  = TEAM_POLICE   or 1
+TEAM_POLICE  = TEAM_POLICE   or -1
 TEAM_GANG    = TEAM_GANG     or -1
 TEAM_MOB     = TEAM_MOB      or -1
 TEAM_GUN     = TEAM_GUN      or -1
@@ -1592,10 +1592,17 @@ GAMEMODE.CivilProtection = {
 	[TEAM_ADMIN] = true,
 	[TEAM_MFOA1GEN] = true,
 	[TEAM_MFOA1] = true,
+	[TEAM_MFOHDZW] = true,
+	[TEAM_MFOR] = true,
+	[TEAM_MFOMED] = true,
+	[TEAM_MFODOG] = true,
+	[TEAM_MFOW] = true,
+	[TEAM_MFOWS] = true,
+	[TEAM_MFOHDGEN] = true,
 }
 
 -- Hitman team
-DarkRP.addHitmanTeam(TEAM_KLASAS)
+DarkRP.addHitmanTeam(TEAM_KLASADZB)
 
 -- Demote groups
 DarkRP.createDemoteGroup("Cops", {TEAM_POLICE, TEAM_CHIEF})
