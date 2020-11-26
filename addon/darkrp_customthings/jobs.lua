@@ -17,7 +17,7 @@ TEAM_CITIZEN = DarkRP.createJob("Citizen", {
 		"models/classd/player/prisoners/jumpsuitm07.mdl",
     },
     description = [[Klasa D jest to domyślna klasa która jest brana na Badania]],
-    weapons = {},
+    weapons = {"weapon_physcannon", "weapon_hands", "weapon_fists", "keys", "surrender_animation_swep"},
     command = "citizen",
     max = 0,
     salary = GAMEMODE.Config.normalsalary,
@@ -43,7 +43,7 @@ TEAM_KLASAD = DarkRP.createJob("Klasa D", {
 		"models/classd/player/prisoners/jumpsuitm07.mdl",
     },
     description = [[Klasa D jest to domyślna klasa która jest brana na Badania]],
-    weapons = {"weapon_fists", "weapon_empty_hands"},
+    weapons = {"weapon_physcannon", "weapon_hands", "weapon_fists", "keys", "surrender_animation_swep"},
     command = "KlasaD",
     max = 0,
     salary = GAMEMODE.Config.normalsalary,
@@ -66,7 +66,7 @@ TEAM_KLASADZB = DarkRP.createJob("Klasa D - (Płatny zabójca)", {
 		"models/classd/player/prisoners/jumpsuitm07.mdl",
     },
     description = [[Klasa D jest to domyślna klasa z możliwością przyjęcia zabójstwa]],
-    weapons = {"weapon_fists", "weapon_empty_hands"},
+    weapons = {"weapon_physcannon", "weapon_hands", "weapon_fists", "keys", "surrender_animation_swep"},
     command = "Klasaplatna",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
@@ -74,6 +74,7 @@ TEAM_KLASADZB = DarkRP.createJob("Klasa D - (Płatny zabójca)", {
     vote = false,
     hasLicense = false,
     candemote = false,
+	level = 2,
     category = "Klasy",
 })
 
@@ -88,9 +89,9 @@ TEAM_KLASAS = DarkRP.createJob("Sprzątacz", {
         "models/player/kerry/class_jan_7.mdl",
     },
     description = [[Sprzątacze to klasa D uprawniona do czyszczenia fundacji za bycie grzecznym oraz podporządkowanym]],
-    weapons = {"weapon_fists", "weapon_empty_hands", "weapon_pass_rp", "guthscp_keycard_lvl_1"},
+    weapons = {"weapon_fists", "weapon_empty_hands", "weapon_pass_rp", "guthscp_keycard_lvl_1", "surrender_animation_swep"},
     command = "Sprzatacz",
-    max = 5,
+    max = 3,
     salary = GAMEMODE.Config.normalsalary,
     admin = 0,
     vote = false,
@@ -106,7 +107,7 @@ TEAM_KWATER = DarkRP.createJob("Kwatermistrz", {
         "models/player/monk.mdl",
     },
     description = [[Sprzątacze to klasa D uprawniona do czyszczenia fundacji za bycie grzecznym oraz podporządkowanym]],
-    weapons = {"weapon_fists", "weapon_empty_hands", "guthscp_keycard_lvl_1", "weapon_pass_rp"},
+    weapons = {"weapon_fists", "weapon_empty_hands", "guthscp_keycard_lvl_1", "weapon_pass_rp", "surrender_animation_swep"},
     command = "Kwatermistrz",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
@@ -115,7 +116,7 @@ TEAM_KWATER = DarkRP.createJob("Kwatermistrz", {
     hasLicense = true,
     candemote = false,
 	hobo = true,
-	level = 5,
+	level = 4,
     category = "Klasy",
 })
 
@@ -125,7 +126,7 @@ TEAM_KUCHARZ = DarkRP.createJob("Kucharz", {
         "models/player/p_butcher.mdl",
     },
     description = [[Kucharz to klasa D uprawniona do gotowania klasie D za bycie grzecznym oraz podporządkowanym]],
-    weapons = {"weapon_fists", "weapon_empty_hands", "guthscp_keycard_lvl_1", "csgo_stiletto", "weapon_pass_rp"},
+    weapons = {"weapon_fists", "weapon_empty_hands", "guthscp_keycard_lvl_1", "csgo_stiletto", "weapon_pass_rp", "surrender_animation_swep"},
     command = "Kucharz",
     max = 1,
     salary = GAMEMODE.Config.normalsalary,
@@ -134,7 +135,7 @@ TEAM_KUCHARZ = DarkRP.createJob("Kucharz", {
     hasLicense = true,
     candemote = false,
 	hobo = true,
-	level = 6,
+	level = 5,
     category = "Klasy",
 })
 
@@ -303,14 +304,19 @@ TEAM_ADMIN = DarkRP.createJob("Administracja", {
     description = [[Jest to Administracja serwer obecna do pomocy inaczej AdminOnDuty]],
     weapons = {"arrest_stick", "door_ram", "lockpick", "stunstick", "pocketchecker", "hidden_knife", "weapon_camo", "weapon_beam", "card_lvl_5", "wep_jack_job_drpstungun"},
     command = "Admini",
-    max = 2,
+    max = 5,
     salary = 1000,
-    admin = 2,
+    admin = 1,
     vote = false,
     hasLicense = true,
     candemote = true,
 	mayor = true,
     category = "Admin of duty",
+	PlayerSpawn = function(ply)
+        ply:SetMaxHealth(100000)
+        ply:SetHealth(100000)
+        ply:SetArmor(1000)
+    end
 })
 -- SCP
 TEAM_SCP173 = DarkRP.createJob("SCP 173", {
@@ -735,8 +741,8 @@ TEAM_SCP035 = DarkRP.createJob("SCP 035", {
         ply:SetArmor(0)
     end
 })
--- MFO Hammer Down
-TEAM_MFOHDZ = DarkRP.createJob("MFO - Hammer Down [WL]", {
+-- MFO Ny-7 Hammer Down
+TEAM_MFOHDZ = DarkRP.createJob("Ny-7 [WL]", {
     color = Color(0, 22, 150),
     model = {
         "models/scp_mtf_operator/mtf_operator.mdl",
@@ -758,7 +764,7 @@ TEAM_MFOHDZ = DarkRP.createJob("MFO - Hammer Down [WL]", {
     end
 })
 
-TEAM_MFOHDGEN = DarkRP.createJob("General MFO - Hammer Down [WL]", {
+TEAM_MFOHDGEN = DarkRP.createJob("General Ny-7 [WL]", {
     color = Color(0, 22, 150),
 	model = {
         "models/npc/portal/male_08_garde.mdl",
@@ -772,6 +778,7 @@ TEAM_MFOHDGEN = DarkRP.createJob("General MFO - Hammer Down [WL]", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	chief = true,
     category = "MFO - Hammer Down",
 	PlayerSpawn = function(ply)
         ply:SetMaxHealth(100)
@@ -780,7 +787,7 @@ TEAM_MFOHDGEN = DarkRP.createJob("General MFO - Hammer Down [WL]", {
     end
 })
 
-TEAM_MFOHDMED = DarkRP.createJob("Medyk MFO - Hammer Down [WL]", {
+TEAM_MFOHDMED = DarkRP.createJob("Medyk Ny-7 [WL]", {
     color = Color(0, 22, 150),
     model = {
         "models/payday2/units/medic_player.mdl",
@@ -804,13 +811,13 @@ TEAM_MFOHDMED = DarkRP.createJob("Medyk MFO - Hammer Down [WL]", {
     end
 })
 
-TEAM_MFOHDDOG = DarkRP.createJob("Pies MFO - Hammer Down [WL]", {
+TEAM_MFOHDDOG = DarkRP.createJob("Pies Ny-7 [WL]", {
     color = Color(0, 22, 150),
     model = "models/arachnit/wolfenstein2/kampfhund/kampfhund.mdl",
     description = [[Pies Mobilnej formacji operacyjnej ma za zadanie Pilnować porządku i wyszukiwać kontrabande]],
     weapons = {"weapon_pet", "weapon_empty_hands", "weapon_empty_hands"},
     command = "MFOHD-pies",
-    max = 1,
+    max = 3,
     salary = 100,
     admin = 0,
     vote = false,
@@ -824,7 +831,7 @@ TEAM_MFOHDDOG = DarkRP.createJob("Pies MFO - Hammer Down [WL]", {
     end
 })
 -- MFO Epsilon 11
-TEAM_MFOE1G = DarkRP.createJob("[EVENTOWY] Generał MFO - Epsilon 11", {
+TEAM_MFOE1G = DarkRP.createJob("[EVENTOWY] Generał Epsilon 11", {
     color = Color(0, 37, 250),
     model = {
         "models/mtf/mtf remasteredhd.mdl",
@@ -838,6 +845,7 @@ TEAM_MFOE1G = DarkRP.createJob("[EVENTOWY] Generał MFO - Epsilon 11", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	chief = true,
     category = "MFO - Epsilon 11",
 	PlayerSpawn = function(ply)
         ply:SetMaxHealth(100)
@@ -846,7 +854,7 @@ TEAM_MFOE1G = DarkRP.createJob("[EVENTOWY] Generał MFO - Epsilon 11", {
     end
 })
 
-TEAM_MFOE1 = DarkRP.createJob("[EVENTOWY] MFO - Epsilon 11", {
+TEAM_MFOE1 = DarkRP.createJob("[EVENTOWY] Epsilon 11", {
     color = Color(0, 37, 250),
     model = {
         "models/ninja/mw3/delta/delta4_masked.mdl",
@@ -898,7 +906,7 @@ TEAM_CIR = DarkRP.createJob("[EVENTOWY] Zołnierz CI", {
     description = [[Rekrut rebeli chaosu]],
     weapons = {"cw_ak74", "sg_adrenaline", "cw_smoke_grenade", "cw_flash_grenade", "cw_m1911", "csgo_bayonet_rustcoat", "weapon_empty_hands", "weapon_pass_rp", "keys", "weapon_cuff_elastic", "weapon_hdevice"},
     command = "CI-Rekrut",
-    max = 0,
+    max = 4,
     salary = 50,
     admin = 0,
     vote = false,
@@ -932,7 +940,7 @@ TEAM_CIS = DarkRP.createJob("[EVENTOWY] Zwiadowca CI", {
     description = [[Zwiadowca rebeli chaosu]],
     weapons = {"cw_l85a2", "sg_adrenaline", "cw_smoke_grenade", "cw_flash_grenade", "cw_m1911", "csgo_bayonet_rustcoat", "weapon_empty_hands", "weapon_pass_rp", "keys", "weapon_cuff_elastic", "weapon_hdevice"},
     command = "CI-Szeregowy",
-    max = 6,
+    max = 2,
     salary = 50,
     admin = 0,
     vote = false,
@@ -1026,10 +1034,11 @@ TEAM_DEPZARZ = DarkRP.createJob("Rada O5 [Admin Only]", {
     hasLicense = true,
     candemote = false,
     category = "Zarząd",
-	mayor = true,
+    mayor = true,
+    chief = true,
 	PlayerSpawn = function(ply)
-        ply:SetMaxHealth(3000)
-        ply:SetHealth(3000)
+        ply:SetMaxHealth(500)
+        ply:SetHealth(500)
         ply:SetArmor(100)
     end
 })
@@ -1053,11 +1062,12 @@ TEAM_DEPDYR = DarkRP.createJob("Dyrektor Placówki [WL]", {
     hasLicense = true,
     candemote = false,
     category = "Zarząd",
-	mayor = true,
+    mayor = true,
+    chief = true,
 	PlayerSpawn = function(ply)
-        ply:SetMaxHealth(2000)
-        ply:SetHealth(2000)
-        ply:SetArmor(50)
+        ply:SetMaxHealth(300)
+        ply:SetHealth(300)
+        ply:SetArmor(100)
     end
 })
 -- VIP
@@ -1085,15 +1095,12 @@ TEAM_DEPDS = DarkRP.createJob("Specjalista ds. przechowywania [VIP]", {
 TEAM_DEPDS = DarkRP.createJob("Likwidator biologiczny [VIP]", {
     color = Color(2, 14, 153),
     model = {
-        "models/player/tfa_trent_cleaner_grenadier.mdl",
-        "models/player/tfa_trent_cleaner_mech.mdl",
-        "models/player/ztfa_trent_cleaner_grenadier.mdl",
-        "models/player/ztfa_trent_cleaner_mech.mdl",
+        "models/dxn/cod_ghosts/hazmat_pm.mdl",
     },
     description = [[Ma za zadanie zwalczyć biologiczne choroby, Przedmioty czy anomalie.]],
     weapons = {"weapon_fists", "weapon_empty_hands", "weapon_stunstick", "sg_adrenaline", "weapon_pass_rp", "keys", "guthscp_keycard_lvl_3", "weapon_ai_flamethrower"},
     command = "likwidator",
-    max = 6,
+    max = 2,
     salary = 95,
     admin = 0,
     vote = false,
@@ -1110,21 +1117,12 @@ TEAM_DEPDS = DarkRP.createJob("Likwidator biologiczny [VIP]", {
 TEAM_DEPLOG = DarkRP.createJob("Logistyki", {
     color = Color(153, 2, 75),
     model = {
-        "models/cultist/worker_f.mdl",
-        "models/cultist/worker_f2.mdl",
-        "models/cultist/worker_f3.mdl",
-        "models/cultist/worker_f4.mdl",
-        "models/cultist/worker_f5.mdl",
-        "models/cultist/worker_male.mdl",
-		"models/cultist/worker_male2.mdl",
-		"models/cultist/worker_male3.mdl",
-		"models/cultist/worker_male4.mdl",
-		"models/cultist/worker_male5.mdl",
+        "models/humans/bms_cwork.mdl",
     },
     description = [[DL odpowiedzialny jest za transfery zasobów naturalnych, finansowych oraz ludzkich pomiędzy placówkami.]],
     weapons = {"weapon_fists", "weapon_empty_hands", "weapon_stunstick", "sg_adrenaline", "weapon_pass_rp", "keys", "guthscp_keycard_lvl_2"},
     command = "Dep-log",
-    max = 5,
+    max = 2,
     salary = 50,
     admin = 0,
     vote = false,
@@ -1154,7 +1152,7 @@ TEAM_DEPMED = DarkRP.createJob("Medycyny", {
     description = [[DM odpowiedzialny jest za utrzymywanie zdrowia pracowników SCP.]],
     weapons = {"weapon_fists", "weapon_empty_hands", "weapon_stunstick", "sg_adrenaline", "weapon_pass_rp", "keys", "guthscp_keycard_lvl_2", "med_kit"},
     command = "Dep-Med",
-    max = 5,
+    max = 3,
     salary = 50,
     admin = 0,
     vote = false,
@@ -1197,7 +1195,7 @@ TEAM_DEPINZ = DarkRP.createJob("Inżynierii", {
     description = [[DI odpowiedzialny jest za utrzymywanie sprzętu technicznego oraz wszelkich usług dostępnych w placówkach Fundacji ]],
     weapons = {"weapon_fists", "weapon_empty_hands", "weapon_stunstick", "sg_adrenaline", "weapon_pass_rp", "keys", "guthscp_keycard_lvl_2"},
     command = "Dep-Inz",
-    max = 5,
+    max = 2,
     salary = 50,
     admin = 0,
     vote = false,
@@ -1267,7 +1265,7 @@ TEAM_AgentDB = DarkRP.createJob("Agent DB [WL]", {
     end
 })
 -- FO
-TEAM_OCHRONASA = DarkRP.createJob("FO - Sanitariusz Ochrona [WL]", {
+TEAM_OCHRONASA = DarkRP.createJob("Sanitariusz Ochrona [WL]", {
     color = Color(2, 90, 153),
     model = {
         "models/payday2/units/medic_player_pd2anim.mdl",
@@ -1290,7 +1288,7 @@ TEAM_OCHRONASA = DarkRP.createJob("FO - Sanitariusz Ochrona [WL]", {
     end
 })
 
-TEAM_OCHRONA = DarkRP.createJob("FO - Ochrona [WL]", {
+TEAM_OCHRONA = DarkRP.createJob("Ochrona [WL]", {
     color = Color(2, 90, 153),
     model = {
         "models/scprp/riot_06.mdl",
@@ -1315,7 +1313,7 @@ TEAM_OCHRONA = DarkRP.createJob("FO - Ochrona [WL]", {
     end
 })
 
-TEAM_POCHRONA = DarkRP.createJob("FO - Rekrut", {
+TEAM_POCHRONA = DarkRP.createJob("Rekrut", {
     color = Color(2, 90, 153),
     model = {
         "models/scprp/riot_01.mdl",
@@ -1332,7 +1330,7 @@ TEAM_POCHRONA = DarkRP.createJob("FO - Rekrut", {
     vote = false,
     hasLicense = true,
     candemote = false,
-	level = 3,
+	level = 7,
     category = "FO - Ochrona",
 	PlayerSpawn = function(ply)
         ply:SetMaxHealth(100)
@@ -1341,7 +1339,7 @@ TEAM_POCHRONA = DarkRP.createJob("FO - Rekrut", {
     end
 })
 
-TEAM_BOTCHRONA = DarkRP.createJob("FO - BOT [VIP]", {
+TEAM_BOTCHRONA = DarkRP.createJob("BOT [VIP]", {
     color = Color(2, 90, 153),
     model = {
         "models/vanquish/player/augmented_reaction_suit.mdl",
@@ -1349,7 +1347,7 @@ TEAM_BOTCHRONA = DarkRP.createJob("FO - BOT [VIP]", {
     description = [[Bot pacyfikacyjny ochrony zajmuje sie Patrolowaniem Klasy D i poziomu bliskiego mu lub wyznaczonego]],
     weapons = {"weapon_fists", "weapon_empty_hands", "weapon_stunstick", "cw_fiveseven", "cw_blackops3_xr2", "keys", "weapon_cuff_elastic", "weapon_pass_rp", "guthscp_keycard_lvl_3", "dradio"},
     command = "Ochrona-bot",
-    max = 5,
+    max = 3,
     salary = 90,
     admin = 0,
     vote = false,
@@ -1363,7 +1361,7 @@ TEAM_BOTCHRONA = DarkRP.createJob("FO - BOT [VIP]", {
     end
 })
 -- MFO Alpha 1
-TEAM_MFOA1GEN = DarkRP.createJob("Generał MFO - Alpha 1 [WL]", {
+TEAM_MFOA1GEN = DarkRP.createJob("Generał Alpha 1 [WL]", {
     color = Color(2, 90, 153),
     model = "models/kss/tsremastered/smod_operator_tac_01.mdl",
     description = [[Formacja odpowiadająca bezpośrednio przed Radą O5 oraz dyrektora placówki masz przy nich być i ich chronić oraz szkolić swoich]],
@@ -1375,6 +1373,7 @@ TEAM_MFOA1GEN = DarkRP.createJob("Generał MFO - Alpha 1 [WL]", {
     vote = false,
     hasLicense = true,
     candemote = false,
+	chief = true,
     category = "MFO - Alpha 1",
 	PlayerSpawn = function(ply)
         ply:SetMaxHealth(100)
@@ -1383,7 +1382,7 @@ TEAM_MFOA1GEN = DarkRP.createJob("Generał MFO - Alpha 1 [WL]", {
     end
 })
 
-TEAM_MFOA1 = DarkRP.createJob("MFO - Alpha 1 [WL]", {
+TEAM_MFOA1 = DarkRP.createJob("Alpha 1 [WL]", {
     color = Color(2, 90, 153),
     model = {
         "models/scp_mtf_russian/mtf_rus_02.mdl",
@@ -1396,7 +1395,7 @@ TEAM_MFOA1 = DarkRP.createJob("MFO - Alpha 1 [WL]", {
     description = [[Formacja odpowiadająca bezpośrednio przed Radą O5 oraz dyrektora placówki masz przy nich być i ich chronić]],
     weapons = {"weapon_fists", "weapon_empty_hands", "cw_blackops3_dlc2_arak", "salute_swep", "csgo_falchion_bluesteel", "dradio", "cw_blackops3_mr6", "cw_flash_grenade", "sg_adrenaline", "keys", "weapon_cuff_elastic", "weapon_pass_rp", "guthscp_keycard_lvl_4", "dradio", "weapon_ai_noisemaker"},
     command = "MFOA1",
-    max = 6,
+    max = 4,
     salary = 100,
     admin = 0,
     vote = false,
@@ -1413,20 +1412,12 @@ TEAM_MFOA1 = DarkRP.createJob("MFO - Alpha 1 [WL]", {
 TEAM_ASNaukowiec = DarkRP.createJob("Asystent Naukowy", {
     color = Color(0, 149, 255),
     model = {
-        "models/cultist/scp_rp/scientists_1.mdl",
-        "models/cultist/scp_rp/scientists_2.mdl",
-        "models/cultist/scp_rp/scientists_3.mdl",
-        "models/cultist/scp_rp/scientists_4.mdl",
-        "models/cultist/scp_rp/scientists_5.mdl",
-        "models/cultist/scp_rp/scientists_6.mdl",
-        "models/cultist/scp_rp/scientists_7.mdl",
-		"models/cultist/scp_rp/scientists_8.mdl",
-		"models/cultist/scp_rp/scientists_9.mdl",
+        "models/player/humans/class_scientist/class_scientist_1.mdl",
     },
     description = [[Jako asystent ucz sie badań i możesz przeprowadzać badania nad klasą Safe i składać raporty głównemu naukowcowi.]],
     weapons = {"weapon_fists", "weapon_empty_hands", "salute_swep", "keys", "weapon_pass_rp", "guthscp_keycard_lvl_1", "dradio"},
     command = "ASNaukowiec",
-    max = 6,
+    max = 3,
     salary = 50,
     admin = 0,
     vote = false,
@@ -1439,20 +1430,12 @@ TEAM_ASNaukowiec = DarkRP.createJob("Asystent Naukowy", {
 TEAM_Naukowiec = DarkRP.createJob("Naukowiec [WL]", {
     color = Color(0, 149, 255),
     model = {
-        "models/cultist/scp_rp/scientists_1.mdl",
-        "models/cultist/scp_rp/scientists_2.mdl",
-        "models/cultist/scp_rp/scientists_3.mdl",
-        "models/cultist/scp_rp/scientists_4.mdl",
-        "models/cultist/scp_rp/scientists_5.mdl",
-        "models/cultist/scp_rp/scientists_6.mdl",
-        "models/cultist/scp_rp/scientists_7.mdl",
-		"models/cultist/scp_rp/scientists_8.mdl",
-		"models/cultist/scp_rp/scientists_9.mdl",
+        "models/player/humans/class_scientist/class_scientist_2.mdl",
     },
     description = [[Jako naukowiec możesz przeprowadzać badania nad Euclidami i składać raporty głównemu naukowcowi]],
     weapons = {"weapon_fists", "weapon_empty_hands", "salute_swep", "weapon_stunstick", "keys", "weapon_pass_rp", "guthscp_keycard_lvl_3", "dradio"},
     command = "Naukowiec",
-    max = 6,
+    max = 2,
     salary = 70,
     admin = 0,
     vote = false,
@@ -1465,20 +1448,12 @@ TEAM_Naukowiec = DarkRP.createJob("Naukowiec [WL]", {
 TEAM_MŁNaukowiec = DarkRP.createJob("Młodszy Naukowiec [WL]", {
     color = Color(0, 149, 255),
     model = {
-        "models/cultist/scp_rp/scientists_1.mdl",
-        "models/cultist/scp_rp/scientists_2.mdl",
-        "models/cultist/scp_rp/scientists_3.mdl",
-        "models/cultist/scp_rp/scientists_4.mdl",
-        "models/cultist/scp_rp/scientists_5.mdl",
-        "models/cultist/scp_rp/scientists_6.mdl",
-        "models/cultist/scp_rp/scientists_7.mdl",
-		"models/cultist/scp_rp/scientists_8.mdl",
-		"models/cultist/scp_rp/scientists_9.mdl",
+        "models/player/humans/class_scientist/class_scientist_3.mdl",
     },
     description = [[Jako młodszy naukowiec możesz przeprowadzać badania nad Euclidami i składać raporty głównemu naukowcowi]],
     weapons = {"weapon_fists", "weapon_empty_hands", "salute_swep","keys", "weapon_pass_rp", "guthscp_keycard_lvl_2", "weapon_stunstick", "dradio"},
     command = "Mł-Naukowiec",
-    max = 4,
+    max = 2,
     salary = 60,
     admin = 0,
     vote = false,
@@ -1491,20 +1466,12 @@ TEAM_MŁNaukowiec = DarkRP.createJob("Młodszy Naukowiec [WL]", {
 TEAM_STNaukowiec = DarkRP.createJob("Starszy Naukowiec [WL]", {
     color = Color(0, 149, 255),
     model = {
-        "models/cultist/scp_rp/scientists_1.mdl",
-        "models/cultist/scp_rp/scientists_2.mdl",
-        "models/cultist/scp_rp/scientists_3.mdl",
-        "models/cultist/scp_rp/scientists_4.mdl",
-        "models/cultist/scp_rp/scientists_5.mdl",
-        "models/cultist/scp_rp/scientists_6.mdl",
-        "models/cultist/scp_rp/scientists_7.mdl",
-		"models/cultist/scp_rp/scientists_8.mdl",
-		"models/cultist/scp_rp/scientists_9.mdl",
+        "models/player/humans/class_scientist/class_scientist_5.mdl",
     },
     description = [[Jako Starszy naukowiec masz za zadanie badać Klase Keter i składać o nich raporty Naukowcowi głównemu.]],
     weapons = {"weapon_fists", "weapon_empty_hands", "salute_swep", "keys", "weapon_pass_rp", "guthscp_keycard_lvl_3", "weapon_stunstick", "dradio"},
     command = "ST-Naukowiec",
-    max = 4,
+    max = 2,
     salary = 80,
     admin = 0,
     vote = false,
@@ -1570,6 +1537,26 @@ TEAM_FTG = DarkRP.createJob("FT - Dowódca [WL]", {
     weapons = {"cw_m14", "cw_fiveseven", "weapon_cuff_elastic", "weapon_empty_hands", "salute_swep", "weapon_stunstick", "keys", "weapon_pass_rp", "guthscp_keycard_lvl_4", "cross_arms_swep", "cross_arms_infront_swep", "dradio", "weapon_ai_noisemaker"},
     command = "FT-General",
     max = 3,
+    salary = 100,
+    admin = 0,
+    vote = false,
+    hasLicense = true,
+    candemote = false,
+    category = "FT Siły Reagowania",
+	PlayerSpawn = function(ply)
+        ply:SetMaxHealth(100)
+        ply:SetHealth(100)
+        ply:SetArmor(100)
+    end
+})
+
+TEAM_FTG = DarkRP.createJob("FT - Proximia [WL]", {
+    color = Color(0, 149, 255),
+    model = "models/snake/scp/ct_sas_cso2.mdl",
+    description = [[Jest to odział do zabezpieczania klasy Euclid keter.]],
+    weapons = {"cw_blackops3_dlc3_famas", "cw_fiveseven", "weapon_cuff_elastic", "weapon_empty_hands", "salute_swep", "weapon_stunstick", "keys", "weapon_pass_rp", "guthscp_keycard_lvl_4", "cross_arms_swep", "cross_arms_infront_swep", "dradio", "weapon_ai_noisemaker"},
+    command = "FT-Proximia",
+    max = 5,
     salary = 100,
     admin = 0,
     vote = false,
