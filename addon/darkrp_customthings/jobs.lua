@@ -1,3 +1,21 @@
+--[[---------------------------------------------------------------------------
+DarkRP custom jobs
+---------------------------------------------------------------------------
+This file contains your custom jobs.
+This file should also contain jobs from DarkRP that you edited.
+
+Note: If you want to edit a default DarkRP job, first disable it in darkrp_config/disabled_defaults.lua
+      Once you've done that, copy and paste the job to this file and edit it.
+
+The default jobs can be found here:
+https://github.com/FPtje/DarkRP/blob/master/gamemode/config/jobrelated.lua
+
+For examples and explanation please visit this wiki page:
+https://darkrp.miraheze.org/wiki/DarkRP:CustomJobFields
+
+Add your custom jobs under the following line:
+---------------------------------------------------------------------------]]
+
 -- Autorem tych prac jest: Zabójca997 SteamID: STEAM_0:0:96053498
 -- © Prawa autorskie zastrzeżone.
 -- Zakazuje usuwania linijki o autorze oraz uzycia do celów komercyjnych.
@@ -1264,7 +1282,7 @@ TEAM_AgentDB = DarkRP.createJob("Agent DB [WL]", {
         ply:SetArmor(100)
     end
 })
--- FO
+-- FO --
 TEAM_OCHRONASA = DarkRP.createJob("Sanitariusz Ochrona [WL]", {
     color = Color(2, 90, 153),
     model = {
@@ -1360,7 +1378,7 @@ TEAM_BOTCHRONA = DarkRP.createJob("BOT [VIP]", {
         ply:SetArmor(150)
     end
 })
--- MFO Alpha 1
+-- MFO Alpha 1 --
 TEAM_MFOA1GEN = DarkRP.createJob("Generał Alpha 1 [WL]", {
     color = Color(2, 90, 153),
     model = "models/kss/tsremastered/smod_operator_tac_01.mdl",
@@ -1408,7 +1426,7 @@ TEAM_MFOA1 = DarkRP.createJob("Alpha 1 [WL]", {
         ply:SetArmor(100)
     end
 })
--- Naukowcy
+-- Naukowcy --
 TEAM_ASNaukowiec = DarkRP.createJob("Asystent Naukowy", {
     color = Color(0, 149, 255),
     model = {
@@ -1494,7 +1512,7 @@ TEAM_GłNaukowiec = DarkRP.createJob("Główny Naukowiec [WL]", {
     candemote = false,
     category = "Naukowcy",
 })
--- FT
+-- Formacja Taktyczna --
 TEAM_FTS = DarkRP.createJob("FT - Funkcjonariusz taktyczny [WL]", {
     color = Color(0, 149, 255),
 	model = {
@@ -1569,7 +1587,7 @@ TEAM_FTG = DarkRP.createJob("FT - Proximia [WL]", {
         ply:SetArmor(100)
     end
 })
--- Inne
+-- Inne --
 TEAM_CYW = DarkRP.createJob("Cywil [UCIECZKA]", {
     color = Color(0, 149, 255),
     model = {
