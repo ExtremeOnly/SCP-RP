@@ -33,6 +33,8 @@ GM.Config.allowvehicleowning            = true
 GM.Config.allowvnocollide               = false
 -- alltalk - Enable for global chat, disable for local chat.
 GM.Config.alltalk                       = false
+-- antimultirun - Disallow people joining your server(s) twice on the same account.
+GM.Config.antimultirun                  = true
 -- autovehiclelock - Enable/Disable automatic locking of a vehicle when a player exits it.
 GM.Config.autovehiclelock               = false
 -- babygod - people spawn godded (prevent spawn killing).
@@ -111,7 +113,7 @@ GM.Config.logging                       = true
 GM.Config.lottery                       = true
 -- showname - Whether or not to display a player's name above their head in-game.
 GM.Config.showname                      = true
--- showname - Whether or not to display a player's health above their head in-game.
+-- showhealth - Whether or not to display a player's health above their head in-game.
 GM.Config.showhealth                    = true
 -- needwantedforarrest - Enable/disable Cops can only arrest wanted people.
 GM.Config.needwantedforarrest           = false
@@ -157,6 +159,8 @@ GM.Config.unlockdoorsonstart            = false
 GM.Config.voiceradius                   = true
 -- tax - Whether players pay taxes on their wallets.
 GM.Config.wallettax                     = false
+-- wantedrespawn - Whether players remain wanted on respawn.
+GM.Config.wantedrespawn                 = false
 -- wantedsuicide - Enable/Disable suiciding while you are wanted by the police.
 GM.Config.wantedsuicide                 = false
 -- realisticfalldamage - Enable/Disable dynamic fall damage. Setting mp_falldamage to 1 will over-ride this.
@@ -199,11 +203,13 @@ GM.Config.entremovedelay                = 0
 -- gunlabweapon - The weapon that the gunlab spawns.
 GM.Config.gunlabweapon                  = "weapon_p2282"
 -- jailtimer - Sets the jailtimer (in seconds).
-GM.Config.jailtimer                     = 120
+GM.Config.jailtimer                     = 900
 -- lockdowndelay - The amount of time a mayor must wait before starting the next lockdown.
-GM.Config.lockdowndelay                 = 120
+GM.Config.lockdowndelay                 = 30
 -- maxadvertbillboards - The maximum number of /advert billboards a player can place.
 GM.Config.maxadvertbillboards           = 3
+-- maxCheques - The maximum number of cheques someone can write
+GM.Config.maxCheques                    = 5
 -- maxdoors - Sets the max amount of doors one can own.
 GM.Config.maxdoors                      = 10
 -- maxdrugs - Sets max drugs.
@@ -251,7 +257,7 @@ GM.Config.runspeed                      = 240
 -- runspeed - Sets the max running speed for CP teams.
 GM.Config.runspeedcp                    = 255
 -- searchtime - Number of seconds for which a search warrant is valid.
-GM.Config.searchtime                    = 30
+GM.Config.searchtime                    = 160
 -- ShipmentSpawnTime - Antispam time between spawning shipments.
 GM.Config.ShipmentSpamTime              = 3
 -- shipmenttime - The number of seconds it takes for a shipment to spawn.
@@ -277,9 +283,19 @@ GM.Config.falldamagedamper              = 15
 -- falldamageamount - The base damage taken from falling for static fall damage. Default is 10.
 GM.Config.falldamageamount              = 10
 -- printeroverheatchance - The likelyhood of a printer overheating. The higher this number, the less likely (minimum 3, default 22).
-GM.Config.printeroverheatchance         = 22
+GM.Config.printeroverheatchance         = 10
 -- printerreward - Reward for destroying a money printer.
 GM.Config.printerreward                 = 950
+
+--[[---------------------------------------------------------------------------
+Chat distance settings
+Distance is in source units (similar to inches)
+---------------------------------------------------------------------------]]
+GM.Config.talkDistance    = 250
+GM.Config.whisperDistance = 90
+GM.Config.yellDistance    = 550
+GM.Config.meDistance      = 250
+GM.Config.voiceDistance   = 550
 
 --[[---------------------------------------------------------------------------
 Other settings
@@ -353,6 +369,8 @@ GM.Config.DisallowDrop = {
 	["scp_049_scp"] = true,
 	["zombie_claws"] = true,
 	["weapon_pet"] = true,
+	["sg_adrenaline"] = true,
+	["sg_medkit"] = true,
 }
 
 -- The list of weapons people spawn with.
@@ -507,7 +525,7 @@ GM.Config.minHitDistance = 150
 -- The text that tells the player he can press use on the hitman to request a hit.
 GM.Config.hudText = "Jestem płatnym zabójcą.\nPNaciśnij E Aby wybrac mi cel!"
 -- The text above a hitman when he's got a hit.
-GM.Config.hitmanText = "Hit\nZakceptowane!"
+GM.Config.hitmanText = "Cel\nZakceptowany!"
 -- The cooldown time for a hit target (so they aren't spam killed).
 GM.Config.hitTargetCooldown = 120
 -- How long a customer has to wait to be able to buy another hit (from the moment the hit is accepted).
