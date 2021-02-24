@@ -316,11 +316,10 @@ TEAM_MOB = DarkRP.createJob("Mob boss", {
 TEAM_ADMIN = DarkRP.createJob("Administracja", {
     color = Color(255, 0, 0, 250),
 	model = {
-        "models/player/inv2.mdl",
         "models/kss/tsremastered/smod_tactical_soldier.mdl",
     },
     description = [[Jest to Administracja serwer obecna do pomocy inaczej AdminOnDuty]],
-    weapons = {"arrest_stick", "door_ram", "lockpick", "stunstick", "pocketchecker", "hidden_knife", "weapon_camo", "weapon_beam", "card_lvl_5", "wep_jack_job_drpstungun"},
+    weapons = {"arrest_stick", "door_ram", "weapon_966", "stunstick", "pocketchecker", "hidden_knife", "weapon_camo", "weapon_beam", "card_lvl_5", "wep_jack_job_drpstungun"},
     command = "Admini",
     max = 5,
     salary = 1000,
@@ -341,7 +340,7 @@ TEAM_SCP173 = DarkRP.createJob("SCP 173", {
     color = Color(150, 63, 0),
     model = "models/jqueary/scp/unity/scp173/scp173unity.mdl",
     description = [[SCP-173 jest zbudowany z betonu i prętów zbrojeniowych oraz pomalowany farbą. SCP-173 jest żywy i ekstremalnie niebezpieczny. Obiekt nie może się poruszać, kiedy ktokolwiek na niego patrzy. Z obiektem należy zawsze utrzymywać kontakt wzrokowy.]],
-    weapons = {"weapon_scp173swep"},
+    weapons = {"gu_scp_173"},
     command = "SCP-173",
     max = 1,
     salary = 100,
@@ -657,7 +656,7 @@ TEAM_SCP049 = DarkRP.createJob("SCP 049", {
 
 TEAM_SCP966 = DarkRP.createJob("SCP 966", {
     color = Color(150, 63, 0),
-    model = "models/vasey105/scp/scp966/scp-966.mdl",
+    model = "models/player/mishka/966_new.mdl",
     description = [[SCP-966 Niewidzialny! widzisz go tylko w NVG może cie próbować uspać]],
     weapons = {"weapon_966"},
     command = "SCP-966",
@@ -1113,7 +1112,7 @@ TEAM_DEPDS = DarkRP.createJob("Specjalista ds. przechowywania [VIP]", {
 TEAM_DEPDS = DarkRP.createJob("Likwidator biologiczny [VIP]", {
     color = Color(2, 14, 153),
     model = {
-        "models/dxn/cod_ghosts/hazmat_pm.mdl",
+        "models/player/humans/class_gasmask/gasmask_civi_01playermodel.mdl",
     },
     description = [[Ma za zadanie zwalczyć biologiczne choroby, Przedmioty czy anomalie.]],
     weapons = {"weapon_fists", "weapon_empty_hands", "weapon_stunstick", "sg_adrenaline", "weapon_pass_rp", "keys", "guthscp_keycard_lvl_3", "weapon_ai_flamethrower"},
