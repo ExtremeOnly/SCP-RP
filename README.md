@@ -12,6 +12,6 @@ Te pliki muszą zostać wydany na licencji CC BY-NC 4.0 co prowadzi do tego iż:
 
 ## Nasze strony
 
-Strona www: https://ExtremeOnly.net.pl/www/
-Forum: https://ExtremeOnly.net.pl
+Strona www: https://ExtremeOnly.ga
+Forum: https://ExtremeOnly.ga/forum
 
