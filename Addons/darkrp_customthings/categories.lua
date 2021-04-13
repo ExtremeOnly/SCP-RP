@@ -4,7 +4,7 @@ Categories
 The categories of the default F4 menu.
 
 Please read this page for more information:
-http://wiki.darkrp.com/index.php/DarkRP:Categories
+https://darkrp.miraheze.org/wiki/DarkRP:Categories
 
 In case that page can't be reached, here's an example with explanation:
 
@@ -90,7 +90,7 @@ DarkRP.createCategory{
    categorises = "entities",
    startExpanded = true,
    color = Color(0, 138, 138, 138),
-   canSee = function(ply) return true end,
+   canSee = function(ply) return table.HasValue({TEAM_MFOHDGEN, TEAM_FTG, TEAM_CIG, TEAM_MFOA1GEN, TEAM_ADMIN, TEAM_DEPZARZ, TEAM_DEPDYR}, ply:Team()) end,
    sortOrder = 2,
 }
 
@@ -99,17 +99,26 @@ DarkRP.createCategory{
    categorises = "entities",
    startExpanded = true,
    color = Color(0, 54, 153, 255),
-   canSee = function(ply) return true end,
+   canSee = function(ply) return table.HasValue({TEAM_KLASAD, TEAM_KLASADZB, TEAM_KLASAS, TEAM_KWATER, TEAM_KUCHARZ}, ply:Team()) end,
    sortOrder = 1,
 }
 
 DarkRP.createCategory{
    name = "Book",
    categorises = "entities",
-   startExpanded = true,
+   startExpanded = false,
    color = Color(0, 255, 178, 255),
-   canSee = function(ply) return true end,
+   canSee = function(ply) return table.HasValue({TEAM_CITIZEN}, ply:Team()) end,
    sortOrder = 3,
+}
+
+DarkRP.createCategory{
+   name = "Other",
+   categorises = "entities",
+   startExpanded = false,
+   color = Color(0, 255, 178, 255),
+   canSee = function(ply) return table.HasValue({TEAM_CITIZEN}, ply:Team()) end,
+   sortOrder = 25,
 }
 -- Bronie
 DarkRP.createCategory{

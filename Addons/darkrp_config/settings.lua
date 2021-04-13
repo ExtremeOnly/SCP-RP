@@ -62,13 +62,13 @@ GM.Config.customspawns                  = true
 -- deathblack - Whether or not a player sees black on death.
 GM.Config.deathblack                    = false
 -- showdeaths - Display kill information in the upper right corner of everyone's screen.
-GM.Config.showdeaths                    = true
+GM.Config.showdeaths                    = false
 -- deadtalk - Enable/disable whether people talk and use commands while dead.
-GM.Config.deadtalk                      = false
+GM.Config.deadtalk                      = true
 -- deadvoice - Enable/disable whether people talk through the microphone while dead.
-GM.Config.deadvoice                     = false
+GM.Config.deadvoice                     = true
 -- deathpov - Enable/disable whether people see their death in first person view.
-GM.Config.deathpov                      = false
+GM.Config.deathpov                      = true
 -- decalcleaner - Enable/Disable clearing ever players decals.
 GM.Config.decalcleaner                  = true
 -- disallowClientsideScripts - Clientside scripts can be very useful for customizing the HUD or to aid in building. This option bans those scripts.
@@ -96,9 +96,9 @@ GM.Config.enforceplayermodel            = true
 -- globalshow - Whether or not to display player info above players' heads in-game.
 GM.Config.globalshow                    = false
 -- ironshoot - Enable/disable whether people need iron sights to shoot.
-GM.Config.ironshoot                     = true
+GM.Config.ironshoot                     = false
 -- showjob - Whether or not to display a player's job above their head in-game.
-GM.Config.showjob                       = true
+GM.Config.showjob                       = false
 -- letters - Enable/disable letter writing / typing.
 GM.Config.letters                       = true
 -- license - Enable/disable People need a license to be able to pick up guns.
@@ -114,7 +114,7 @@ GM.Config.lottery                       = true
 -- showname - Whether or not to display a player's name above their head in-game.
 GM.Config.showname                      = true
 -- showhealth - Whether or not to display a player's health above their head in-game.
-GM.Config.showhealth                    = true
+GM.Config.showhealth                    = false
 -- needwantedforarrest - Enable/disable Cops can only arrest wanted people.
 GM.Config.needwantedforarrest           = false
 -- noguns - Enabling this feature bans Guns and Gun Dealers.
@@ -517,7 +517,7 @@ GM.Config.AFKDelay = 900
 Hitmenu module
 ---------------------------------------------------------------------------]]
 -- The minimum price for a hit.
-GM.Config.minHitPrice = 100
+GM.Config.minHitPrice = 1000
 -- The maximum price for a hit.
 GM.Config.maxHitPrice = 50000
 -- The minimum distance between a hitman and his customer when they make the deal.

@@ -6,13 +6,13 @@ This file contains your custom entities.
 This file should also contain entities from DarkRP that you edited.
 
 Note: If you want to edit a default DarkRP entity, first disable it in darkrp_config/disabled_defaults.lua
-	Once you've done that, copy and paste the entity to this file and edit it.
+    Once you've done that, copy and paste the entity to this file and edit it.
 
 The default entities can be found here:
-https://github.com/FPtje/DarkRP/blob/master/gamemode/config/addentities.lua#L111
+https://github.com/FPtje/DarkRP/blob/master/gamemode/config/addentities.lua
 
 For examples and explanation please visit this wiki page:
-http://wiki.darkrp.com/index.php/DarkRP:CustomEntityFields
+https://darkrp.miraheze.org/wiki/DarkRP:CustomEntityFields
 
 Add entities under the following line:
 ---------------------------------------------------------------------------]]
@@ -59,7 +59,21 @@ DarkRP.createEntity( "Paczka granatników", {
    category = "Amunicja",
    -- CustomCheck
    customCheck = function(ply) return
-    table.HasValue({TEAM_MFOHDGEN, TEAM_FTG, TEAM_CIG, TEAM_MFOA1GEN}, ply:Team())
+    table.HasValue({TEAM_MFOHDGEN, TEAM_FTG, TEAM_CIG, TEAM_MFOA1GEN, TEAM_ADMIN, TEAM_DEPZARZ, TEAM_DEPDYR}, ply:Team())
    end,
-   CustomCheckFailMsg = "Tylko dla wybranych prac",
+   CustomCheckFailMsg = "Tylko dla specjalnych prac militarnych",
+})
+
+DarkRP.createEntity( "Kamizelka", { 
+   ent = "armorplate_pickup",
+   model = "models/weapons/w_armorplateanim.mdl",
+   price = 1000,
+   max = 1,
+   cmd = ".armorpate",
+   category = "Amunicja",
+   -- CustomCheck
+   customCheck = function(ply) return
+    table.HasValue({TEAM_MFOHDGEN, TEAM_FTG, TEAM_CIG, TEAM_MFOA1GEN, TEAM_ADMIN, TEAM_DEPZARZ, TEAM_DEPDYR, TEAM_MFOE1G, TEAM_MFOE1, TEAM_SZEFOCH, TEAM_AgentDB, TEAM_MFOHDZ, TEAM_MFOHDMED, TEAM_MFOHDDOG, TEAM_FTS, TEAM_MFOA1}, ply:Team())
+   end,
+   CustomCheckFailMsg = "Tylko dla specjalnych prac militarnych",
 })

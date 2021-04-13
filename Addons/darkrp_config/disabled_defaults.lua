@@ -19,20 +19,25 @@ You can copy the medic from DarkRP and paste it in darkrp_config/jobs.lua
 --[[---------------------------------------------------------------------------
 The list of modules that are disabled. Set to true to disable, false to enable.
 Modules that are not in this list are enabled by default.
+In some cases some external addons may overwrite one of the modules below and will expect them to be enabled to work.
+In these few cases it will be pretty obvious when you expect something to happen and nothing does.
 ---------------------------------------------------------------------------]]
 DarkRP.disabledDefaults["modules"] = {
 	["afk"]              = true,
 	["chatsounds"]       = false,
 	["events"]           = false,
 	["fpp"]              = false,
+	["hitmenu"]          = true,
 	["f1menu"]           = true,
 	["f4menu"]           = true,
 	["hitmenu"]          = false,
 	["hud"]              = false,
 	["hungermod"]        = true,
 	["playerscale"]      = false,
-	["sleep"]            = false,
+	["sleep"]            = true,
 	["fadmin"]           = false,
+	["animations"]       = false,
+    ["chatindicator"]    = false,
 }
 
 
@@ -81,6 +86,7 @@ DarkRP.disabledDefaults["entities"] = {
 	["Gun lab"]       = false,
 	["Money printer"] = true,
 	["Microwave"]     = false, --Hungermod only
+	["Tip Jar"]       = false,
 }
 
 --[[---------------------------------------------------------------------------
@@ -161,4 +167,29 @@ from every job in the group
 DarkRP.disabledDefaults["demotegroups"] = {
 	["Cops"]		 = true,
 	["Gangsters"]	 = true,
+}
+
+--[[---------------------------------------------------------------------------
+Workarounds
+
+DarkRP works around some bugs in GMod and other addons that aren't maintained
+(properly). Disabling workarounds will cause those things to break again.
+---------------------------------------------------------------------------]]
+DarkRP.disabledDefaults["workarounds"] = {
+    ["os.date() Windows crash"]                      = false,
+    ["SkidCheck"]                                    = false,
+    ["nil SteamID64 and AccountID local server fix"] = false,
+    ["Cam function descriptive errors"]              = false,
+    ["Error on edict limit"]                         = false,
+    ["Durgz witty sayings"]                          = false,
+    ["ULX /me command"]                              = false,
+    ["gm_save"]                                      = false,
+    ["rp_downtown_v4c_v2 rooftop spawn"]             = false,
+    ["White flashbang flashes"]                      = false,
+    ["APAnti"]                                       = false,
+    ["Wire field generator exploit fix"]             = false,
+    ["Door tool class fix"]                          = false,
+    ["Constraint crash exploit fix"]                 = false,
+    ["Deprecated console commands"]                  = false,
+    ["disable CAC"]                                  = false,
 }
